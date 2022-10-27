@@ -1,0 +1,234 @@
+:root{
+    --light: #cdcdcd;
+    --primary: #8cb4ff;
+    --secondary: #afa100;
+    --dark: #1b1b1b;
+    --grey: #858585;
+    --grey-lighter: #b3b3b3;
+    --grey-darker: #343434;
+    --html-color: #ff707f;
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h6, p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--dark);
+    color: white;
+    font-family: 'inter', sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    padding: 0 15px;
+}
+
+.header-container {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 5px 0;
+}
+
+.header-logo {
+    display: inline-block;
+    flex: 1;
+    padding-top: 5px;
+    width: 160px;
+}
+.logo-m {
+    fill: var(--primary);
+}
+.header-logo img {
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    flex: 7;
+    justify-content: space-between;
+}
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+}
+.navbar-links > li {
+    position: relative;
+}
+.navbar-links > li > a{
+    border-radius: 5px;
+    padding: 12px 8px;
+    position: relative;
+}
+.navbar-links > li > a:hover {
+    background-color: #93870030;
+    color: #afa100;
+}
+
+.navbar-submenu{
+    width: max-content;
+    background-color: var(--dark);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(251,251,254,.2);
+    visibility: hidden;
+    padding: 0.5rem;
+    position: absolute;
+    top: 35px;
+}
+.navbar-submenu:before {
+    content: "";
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    width: 100%;
+}
+.show{
+    visibility: visible;
+}
+
+.submenu-link{
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    gap: .8rem;
+    padding: 1rem .8rem;
+}
+.submenu-link:hover, 
+.submenu-link.active{
+    background-color: var(--grey-darker);
+}
+.submenu-link::before{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 32px;
+}
+.submenu-link.sbl-html::before{
+    background-color: var(--html-color);
+}
+.submenu-link.sbl-css::before {
+    background-color: rgba(140,180,255,.7);
+}
+.submenu-link.sbl-js::before {
+    background-color: rgba(175,161,0,.7);
+}
+.submenu-link.sbl-general::before {
+    background-color: #ff97a0;
+}
+.submenu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.submenu-container h6 {
+    color: white;
+    font-size: .875rem;
+}
+.submenu-container p {
+    color: white;
+    font-size: .725rem;
+}
+
+.navbar-actions {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: .875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--grey);
+}
+
+.btn-theme {
+    align-items: center;
+    background: transparent;
+    color: var(--light);
+    display: flex;
+    gap: 5px;
+    font-size: .875rem;
+    font-weight: 600;
+    padding: 5px 5px;
+}
+
+.btn-theme i {
+    font-size: 1rem;
+}
+
+.btn-white{
+    background-color: white;
+    color: var(--dark);
+}
+
+.navbar-link {
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.searchbar {
+    position: relative;;
+}
+.searchbar::after {
+    background-color: var(--primary);
+    content: '';
+    display: block;
+    height: .145rem;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+    width: 15px;
+}
+
+.searchbar input {
+    background-color: var(--dark);
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    height: 32px;
+    width: 80px;
+}
+.searchbar .btn-search {
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: var(--grey-lighter);
+    font-size: 1.1rem;
+    padding: 2px 4px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+.searchbar .btn-search:hover {
+    background-color: var(--grey);
+}
